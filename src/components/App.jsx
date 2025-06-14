@@ -51,9 +51,10 @@ export class App extends Component {
     try {
       const updatedMaterial = await API.updateMaterial(fields);
       this.setState(state => ({
-        materials: state.materials.map(material =>
+        materials: state.materials.map(material => 
           material.id === fields.id ? updatedMaterial : material
         ),
+
       }));
     } catch (error) {
       this.setState({ error: true });

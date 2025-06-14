@@ -1,4 +1,4 @@
-import { Material } from '../Materials/Materials';
+import { Material } from '../Material/Material';
 
 export const MaterialList = ({ items, ...otherProps }) => {
   return (

@@ -3,7 +3,7 @@ import { Component } from 'react';
 const EditMaterialModal = ({ onClose, onEdit }) => {
   return (
     <div>
-      <h2>Модалка редактирования материала</h2>
+      <h2>Modal Editor</h2>
       <button
         type="button"
         onClick={() => {
@@ -11,10 +11,10 @@ const EditMaterialModal = ({ onClose, onEdit }) => {
           onClose();
         }}
       >
-        Вот теперь точно редактировать
+        Finish Editor
       </button>
       <button type="button" onClick={onClose}>
-        Закрыть
+        Close
       </button>
     </div>
   );
@@ -34,16 +34,16 @@ export class Material extends Component {
     return (
       <div>
         <p>
-          <b>Название:</b> {item.title}
+          <b>Name:</b> {item.title}
         </p>
         <p>
-          <b>Ссылка:</b> {item.link}
+          <b>URL:</b> {item.link}
         </p>
         <button type="button" onClick={() => onDelete(item.id)}>
-          Удалить
+          Delete
         </button>
         <button type="button" onClick={this.openModal}>
-          Редактировать
+          Update
         </button>
         {isModalOpen && (
           <EditMaterialModal
